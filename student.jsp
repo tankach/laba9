@@ -64,6 +64,10 @@
        </style>
 </head>
 <h1><%= (new java.util.Date()).toLocaleString()%></h1>
+        <p><a href="http://localhost:8080/logout">Log out</a></p>
+
+        <sec:authorize access="hasAuthority('ADMIN')">
+            <h3><a href="http://localhost:8080/registration">To sign-up new user </a></h3>
         <form method="post" action="StudentAdd">
             <table>
                 <tbody>
